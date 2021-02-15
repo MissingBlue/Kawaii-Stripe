@@ -1,0 +1,14 @@
+.stripe {
+	
+	--stripe-base-color: rgb(255,200,0);
+	--stripe-first-color: transparent;
+	--stripe-second-color: rgba(255,255,255,.3);
+	
+	--stripe-angle: -45deg;
+	--stripe-size: 6%;
+	
+	--stripe-image: repeating-linear-gradient(var(--stripe-angle), var(--stripe-first-color), var(--stripe-first-color) var(--stripe-size), var(--stripe-second-color) calc(var(--stripe-size)), var(--stripe-second-color) calc(var(--stripe-size) * 2));
+	
+	background: var(--stripe-image) var(--stripe-base-color);
+	
+}
