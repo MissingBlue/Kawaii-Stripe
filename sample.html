@@ -97,6 +97,19 @@
 								radial-gradient(farthest-corner at left top, rgba(255,200,255,1) 20%, rgba(255,0,160,calc(2 / 3))),
 								linear-gradient(var(--stripe-extension-color), var(--stripe-base-color)) var(--stripe-base-color);
 				
+				align-items: center;
+				display: flex;
+				justify-content: center;
+				
+			}
+			.stripe::before {
+				color: rgba(255,255,255,1);
+				content: "THIS IS YOU!";
+				font: normal normal normal bold 32px/1 Helvetica, Arial, sans-serif;
+				letter-spacing: -1px;
+				text-shadow: 0 0 5px rgba(200,80,160,.2),  0 1px 0 rgba(0,0,0,.1);
+				text-decoration: underline;
+				text-decoration-thickness: 2px;
 			}
 			
 		</style>
