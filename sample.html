@@ -10,7 +10,7 @@
 			html, body { height: 100%; }
 			
 			/* more girly :P */
-			.stripe:hover {
+			.stripe {
 				
 				--stripe-base-color: rgb(120,255,160);
 				--stripe-extension-color: rgb(255,240,120);
@@ -74,11 +74,13 @@
 				--grain-antialias: 1.1;
 				
 				--reflection-angle: 160deg;
-				--reflection-position: 55%;
-				--reflection-color: rgba(255,255,255,calc(2 / 3));
+				--reflection-position: 53%;
+				--reflection-position-end: 90%;
+				--reflection-bound-position: 53.5%;
+				--reflection-color: rgba(255,255,255,1);
 				
 				background: radial-gradient(farthest-corner at right bottom, rgba(255,255,255,0) calc(100% / 3 * 1.25), rgba(255,255,255,1)),
-								linear-gradient(var(--reflection-angle), transparent, transparent var(--reflection-position), var(--reflection-color) var(--reflection-position), var(--reflection-color) var(--reflection-position), transparent),
+								linear-gradient(var(--reflection-angle), transparent, transparent var(--reflection-position), var(--reflection-color) var(--reflection-bound-position), var(--reflection-color) var(--reflection-bound-position), transparent var(--reflection-position-end)),
 								var(--sparkle-third-position) var(--sparkle-third-position)/var(--sparkle-third-bounding-size) var(--sparkle-third-bounding-size-y) radial-gradient(transparent, transparent var(--sparkle-third-size), var(--sparkle-third-color) calc(var(--sparkle-third-size) * var(--sparkle-third-antialias)), var(--sparkle-third-color)),
 								var(--sparkle-forth-position) var(--sparkle-forth-position)/var(--sparkle-forth-bounding-size) var(--sparkle-forth-bounding-size-y) radial-gradient(transparent, transparent var(--sparkle-forth-size), var(--sparkle-forth-color) calc(var(--sparkle-forth-size) * var(--sparkle-forth-antialias)), var(--sparkle-forth-color)),
 								0 0/var(--particle-size) var(--particle-size) radial-gradient(var(--particle-color), var(--particle-color) 50%, transparent 50%, transparent),
