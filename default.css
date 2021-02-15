@@ -5,9 +5,10 @@
 	--stripe-second-color: rgba(255,255,255,.3);
 	
 	--stripe-angle: -45deg;
-	--stripe-size: 6%;
+	--stripe-first-width: 6%;
+	--stripe-second-width: var(--stripe-first-width);
 	
-	--stripe-image: repeating-linear-gradient(var(--stripe-angle), var(--stripe-first-color), var(--stripe-first-color) var(--stripe-size), var(--stripe-second-color) calc(var(--stripe-size)), var(--stripe-second-color) calc(var(--stripe-size) * 2));
+	--stripe-image: repeating-linear-gradient(var(--stripe-angle), var(--stripe-first-color), var(--stripe-first-color) var(--stripe-first-width), var(--stripe-second-color) var(--stripe-first-width), var(--stripe-second-color) calc(var(--stripe-first-width) + var(--stripe-second-width, var(--stripe-first-width))));
 	
 	background: var(--stripe-image) var(--stripe-base-color);
 	
