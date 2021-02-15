@@ -10,16 +10,16 @@
 			html, body { height: 100%; }
 			
 			/* more girly :P */
-			.stripe:hover {
+			.stripe {
 				
-				--stripe-base-color: rgb(255,200,40);
+				--stripe-base-color: rgb(120,255,160);
 				--stripe-extension-color: rgb(255,240,120);
 				--stripe-first-width: .3rem;
 				--stripe-second-width: .1rem;
 				
 				--stripe-second-angle: 45deg;
 				--stripe-second-first-color: transparent;
-				--stripe-second-second-color: rgba(255,255,160,.3);
+				--stripe-second-second-color: rgba(255,255,200,.4);
 				--stripe-second-first-width: 7rem;
 				--stripe-second-second-width: .3rem;
 				
@@ -52,18 +52,26 @@
 				--sparkle-second-size: calc(var(--sparkle-second-bounding-size) / 2);
 				--sparkle-second-antialias: 1.1;
 				
+				--sparkle-third-position: calc(var(--sparkle-third-bounding-size) * .5);
+				--sparkle-third-color: rgba(255,255,255,1);
+				--sparkle-third-bounding-size: 9rem;
+				--sparkle-third-bounding-size-y: 5rem;
+				--sparkle-third-size: calc(var(--sparkle-third-bounding-size) / 2);
+				--sparkle-third-antialias: 1.025;
+				
 				--grain-position: 0;
-				--grain-color: rgba(255,255,0,.3);
+				--grain-color: rgba(255,255,0,.4);
 				--grain-bounding-size: .2rem;
 				--grain-size: 50%;
 				--grain-antialias: 1.1;
 				
-				--reflection-angle: 80deg;
-				--reflection-position: 40%;
+				--reflection-angle: 70deg;
+				--reflection-position: 45%;
 				--reflection-color: rgba(255,255,255,calc(1 / 3));
 				
 				background: radial-gradient(farthest-corner at left bottom, rgba(255,255,255,0) calc(100% / 3 * 2), rgba(255,255,255,1)),
 								linear-gradient(var(--reflection-angle), transparent, transparent var(--reflection-position), var(--reflection-color) var(--reflection-position), var(--reflection-color) var(--reflection-position), transparent),
+								var(--sparkle-third-position) var(--sparkle-third-position)/var(--sparkle-third-bounding-size) var(--sparkle-third-bounding-size-y) radial-gradient(transparent, transparent var(--sparkle-third-size), var(--sparkle-third-color) calc(var(--sparkle-third-size) * var(--sparkle-third-antialias)), var(--sparkle-third-color)),
 								0 0/var(--particle-size) var(--particle-size) radial-gradient(var(--particle-color), var(--particle-color) 50%, transparent 50%, transparent),
 								0 0/var(--particle-size) var(--particle-size) radial-gradient(var(--particle-color), var(--particle-color) 50%, transparent 50%, transparent),
 								var(--particle-second-position) var(--particle-second-position)/var(--particle-second-bounding-size) var(--particle-second-bounding-size) radial-gradient(var(--particle-second-color), var(--particle-second-color) var(--particle-second-size), transparent calc(var(--particle-second-size) * var(--particle-second-antialias)), transparent),
@@ -75,7 +83,7 @@
 								var(--sparkle-position) var(--sparkle-position)/var(--sparkle-bounding-size) var(--sparkle-bounding-size) radial-gradient(transparent, transparent var(--sparkle-size), var(--sparkle-color) calc(var(--sparkle-size) * var(--sparkle-antialias)), var(--sparkle-color)),
 								var(--sparkle-second-position) var(--sparkle-second-position)/var(--sparkle-second-bounding-size) var(--sparkle-second-bounding-size) radial-gradient(transparent, transparent var(--sparkle-second-size), var(--sparkle-second-color) calc(var(--sparkle-second-size) * var(--sparkle-second-antialias)), var(--sparkle-second-color)),
 								var(--grain-position) var(--grain-position)/var(--grain-bounding-size) var(--grain-bounding-size) radial-gradient(var(--grain-color), var(--grain-color) var(--grain-size), transparent calc(var(--grain-size) * var(--grain-antialias)), transparent),
-								radial-gradient(farthest-corner at left top, rgba(255,200,255,1) 20%, rgba(255,255,255,.5)),
+								radial-gradient(farthest-corner at left top, rgba(255,200,255,1) 20%, rgba(255,0,160,calc(2 / 3))),
 								linear-gradient(var(--stripe-extension-color), var(--stripe-base-color)) var(--stripe-base-color);
 				
 			}
