@@ -10,7 +10,7 @@
 			html, body { height: 100%; }
 			
 			/* more girly :P */
-			.stripe:hover {
+			.stripe {
 				
 				--stripe-base-color: rgb(255,200,40);
 				--stripe-extension-color: rgb(255,240,120);
@@ -58,13 +58,19 @@
 				--grain-size: 50%;
 				--grain-antialias: 1.1;
 				
-				background: 0 0/var(--particle-size) var(--particle-size) radial-gradient(var(--particle-color), var(--particle-color) 50%, transparent 50%, transparent),
-								0 0/cover repeating-linear-gradient(var(--stripe-second-angle), var(--stripe-second-first-color), var(--stripe-second-first-color) var(--stripe-second-first-width), var(--stripe-second-second-color) var(--stripe-second-first-width), var(--stripe-second-second-color) calc(var(--stripe-second-first-width) + var(--stripe-second-second-width, var(--stripe-second-first-width)))),
-								repeating-linear-gradient(var(--stripe-third-angle), var(--stripe-second-first-color), var(--stripe-second-first-color) var(--stripe-second-first-width), var(--stripe-second-second-color) var(--stripe-second-first-width), var(--stripe-second-second-color) calc(var(--stripe-second-first-width) + var(--stripe-second-second-width, var(--stripe-second-first-width)))),
+				--reflection-angle: 80deg;
+				--reflection-position: 40%;
+				--reflection-color: rgba(255,255,255,calc(1 / 3));
+				
+				background: radial-gradient(farthest-corner at left bottom, rgba(255,255,255,0) calc(100% / 3 * 2), rgba(255,255,255,1)),
+								linear-gradient(var(--reflection-angle), transparent, transparent var(--reflection-position), var(--reflection-color) var(--reflection-position), var(--reflection-color) var(--reflection-position), transparent),
+								0 0/var(--particle-size) var(--particle-size) radial-gradient(var(--particle-color), var(--particle-color) 50%, transparent 50%, transparent),
 								0 0/var(--particle-size) var(--particle-size) radial-gradient(var(--particle-color), var(--particle-color) 50%, transparent 50%, transparent),
 								var(--particle-second-position) var(--particle-second-position)/var(--particle-second-bounding-size) var(--particle-second-bounding-size) radial-gradient(var(--particle-second-color), var(--particle-second-color) var(--particle-second-size), transparent calc(var(--particle-second-size) * var(--particle-second-antialias)), transparent),
 								var(--particle-third-position) var(--particle-third-position)/var(--particle-third-bounding-size) var(--particle-third-bounding-size) radial-gradient(var(--particle-third-color), var(--particle-third-color) var(--particle-third-size), transparent calc(var(--particle-third-size) * var(--particle-third-antialias)), transparent),
 								radial-gradient(farthest-corner at left top, rgba(255,255,255,.3), transparent),
+								0 0/cover repeating-linear-gradient(var(--stripe-second-angle), var(--stripe-second-first-color), var(--stripe-second-first-color) var(--stripe-second-first-width), var(--stripe-second-second-color) var(--stripe-second-first-width), var(--stripe-second-second-color) calc(var(--stripe-second-first-width) + var(--stripe-second-second-width, var(--stripe-second-first-width)))),
+								repeating-linear-gradient(var(--stripe-third-angle), var(--stripe-second-first-color), var(--stripe-second-first-color) var(--stripe-second-first-width), var(--stripe-second-second-color) var(--stripe-second-first-width), var(--stripe-second-second-color) calc(var(--stripe-second-first-width) + var(--stripe-second-second-width, var(--stripe-second-first-width)))),
 								var(--stripe-image),
 								var(--sparkle-position) var(--sparkle-position)/var(--sparkle-bounding-size) var(--sparkle-bounding-size) radial-gradient(transparent, transparent var(--sparkle-size), var(--sparkle-color) calc(var(--sparkle-size) * var(--sparkle-antialias)), var(--sparkle-color)),
 								var(--sparkle-second-position) var(--sparkle-second-position)/var(--sparkle-second-bounding-size) var(--sparkle-second-bounding-size) radial-gradient(transparent, transparent var(--sparkle-second-size), var(--sparkle-second-color) calc(var(--sparkle-second-size) * var(--sparkle-second-antialias)), var(--sparkle-second-color)),
