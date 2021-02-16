@@ -114,10 +114,10 @@
 			.stripe:hover::before {
 				
 				--sparkle-position: calc(var(--sparkle-bounding-size) * 1);
-				--sparkle-color: rgba(160,104,104,1);
+				--sparkle-color: rgba(160,120,120,1);
 				--sparkle-bounding-size: 10rem;
 				--sparkle-size: calc(var(--sparkle-bounding-size) / 2);
-				--sparkle-antialias: 1.025;
+				--sparkle-antialias: 1.02;
 				
 				--sparkle-second-position: calc(var(--sparkle-second-bounding-size) * 1);
 				--sparkle-second-color: rgba(255,255,255,1);
@@ -127,9 +127,9 @@
 				
 				--repeating-circle-start-color: rgba(255,200,240,.5);
 				--repeating-circle-end-color: transparent;
-				--repeating-circle-start-stop: .4%;
+				--repeating-circle-start-stop: .2%;
 				--repeating-circle-end-stop: 1%;
-				--repeating-circle-antialias: 1.1;
+				--repeating-circle-antialias: 1.05;
 				
 				background:	radial-gradient(ellipse farthest-corner at 25% 25%, transparent 67%, rgb(255,144,160) 95%),
 				var(--sparkle-position) var(--sparkle-position)/var(--sparkle-bounding-size) var(--sparkle-bounding-size) radial-gradient(transparent, transparent var(--sparkle-size), var(--sparkle-color) calc(var(--sparkle-size) * var(--sparkle-antialias)), var(--sparkle-color)),
@@ -137,6 +137,161 @@
 								var(--sparkle-second-position) var(--sparkle-second-position)/var(--sparkle-second-bounding-size) var(--sparkle-second-bounding-size) radial-gradient(transparent, transparent var(--sparkle-second-size), var(--sparkle-second-color) calc(var(--sparkle-second-size) * var(--sparkle-second-antialias)), var(--sparkle-second-color)),
 								repeating-radial-gradient(var(--repeating-circle-start-color), var(--repeating-circle-start-color) var(--repeating-circle-start-stop), var(--repeating-circle-end-color) calc(var(--repeating-circle-start-stop) * var(--repeating-circle-antialias)), var(--repeating-circle-end-color) var(--repeating-circle-end-stop), var(--repeating-circle-end-color) calc(var(--repeating-circle-end-stop) * var(--repeating-circle-antialias))),
 								linear-gradient(rgb(255,120,200), rgb(255,240,120));
+				
+				background-clip: text;
+				color: transparent;
+				content: "THIS IS YOU!";
+				font: normal normal normal bold 20rem/.8 Helvetica, Arial, sans-serif;
+				letter-spacing: -1.5rem;
+				text-shadow: none, 0 0 .6rem rgba(200,120,160,.2),  0 1px 0 rgba(40,0,80,.3);
+				transform: rotate(-20deg) translate(10rem,0);
+				
+			}
+			
+		</style>
+	<head>
+	<body class="stripe">
+	</body>
+</html><!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Sample</title>
+		<link rel="stylesheet" href="default.css">
+		<style>
+			
+			* { margin: 0; padding: 0; }
+			html, body { height: 100%; }
+			
+			/* more girly :P */
+			.stripe:hover {
+				
+				--stripe-base-color: rgb(120,255,160);
+				--stripe-extension-color: rgb(255,240,120);
+				--stripe-first-width: .3rem;
+				--stripe-second-width: .1rem;
+				
+				--stripe-second-angle: 45deg;
+				--stripe-second-first-color: transparent;
+				--stripe-second-second-color: rgba(255,255,200,.4);
+				--stripe-second-first-width: 7rem;
+				--stripe-second-second-width: .3rem;
+				
+				--stripe-third-angle: -45deg;
+				
+				--particle-color: rgba(255,240,232,.6);
+				--particle-size: 4rem;
+				--particle-antialias: 1.05;
+				
+				--particle-second-color: rgba(255,200,160,.3);
+				--particle-second-position: 0rem;
+				--particle-second-bounding-size: calc(var(--particle-size) * .5);
+				--particle-second-size: calc(var(--particle-size) * .1);
+				--particle-second-antialias: 1.2;
+				
+				--particle-third-color: rgba(255,255,255,.5);
+				--particle-third-position: calc(var(--particle-second-bounding-size) / 2);
+				--particle-third-bounding-size: calc(var(--particle-size) * .5);
+				--particle-third-size: calc(var(--particle-size) * .05);
+				--particle-third-antialias: 1.1;
+				
+				--sparkle-position: 0;
+				--sparkle-color: rgba(255,255,255,.7);
+				--sparkle-bounding-size: 2rem;
+				--sparkle-size: calc(var(--sparkle-bounding-size) / 2.1);
+				--sparkle-antialias: 1.1;
+				
+				--sparkle-second-position: calc(var(--sparkle-second-bounding-size) * .5);
+				--sparkle-second-color: rgba(255,255,255,.5);
+				--sparkle-second-bounding-size: 1rem;
+				--sparkle-second-size: calc(var(--sparkle-second-bounding-size) / 2);
+				--sparkle-second-antialias: 1.1;
+				
+				--sparkle-third-position: calc(var(--sparkle-third-bounding-size) * 1);
+				--sparkle-third-color: rgba(255,255,255,1);
+				--sparkle-third-bounding-size: calc(var(--particle-size) * 2);
+				--sparkle-third-bounding-size-y: calc(var(--particle-size) * 2);
+				--sparkle-third-size: calc(var(--sparkle-third-bounding-size) / 2);
+				--sparkle-third-antialias: 1.025;
+				
+				--sparkle-forth-position: calc(var(--sparkle-forth-bounding-size) * 1);
+				--sparkle-forth-color: rgba(200,120,240,1);
+				--sparkle-forth-bounding-size: calc(var(--particle-size) * 2);
+				--sparkle-forth-bounding-size-y: calc(var(--particle-size) * 2);
+				--sparkle-forth-size: calc(var(--sparkle-forth-bounding-size) / 2);
+				--sparkle-forth-antialias: 1.025;
+				
+				--grain-position: 0;
+				--grain-color: rgba(255,255,0,.4);
+				--grain-bounding-size: .2rem;
+				--grain-size: 50%;
+				--grain-antialias: 1.1;
+				
+				--reflection-angle: 160deg;
+				--reflection-position: 51%;
+				--reflection-antialias: 1.05;
+				--reflection-position-end: 90%;
+				--reflection-color: rgba(255,255,255,1);
+				
+				--repeating-circle-start-color: rgba(255,200,240,.5);
+				--repeating-circle-end-color: transparent;
+				--repeating-circle-start-stop: .4%;
+				--repeating-circle-end-stop: 1%;
+				--repeating-circle-antialias: 1.1;
+				
+				background: radial-gradient(farthest-corner at right bottom, rgba(255,255,255,0) calc(100% / 3 * 1.25), rgba(255,255,255,1)),
+								linear-gradient(var(--reflection-angle), transparent, transparent var(--reflection-position), var(--reflection-color) calc(var(--reflection-position) * var(--reflection-antialias)), var(--reflection-color) calc(var(--reflection-position) * var(--reflection-antialias)), transparent var(--reflection-position-end)),
+								radial-gradient(ellipse farthest-corner at 25% 25%, transparent 67%, rgb(255,144,160) 95%),
+								var(--sparkle-third-position) var(--sparkle-third-position)/var(--sparkle-third-bounding-size) var(--sparkle-third-bounding-size-y) radial-gradient(transparent, transparent var(--sparkle-third-size), var(--sparkle-third-color) calc(var(--sparkle-third-size) * var(--sparkle-third-antialias)), var(--sparkle-third-color)),
+								var(--sparkle-forth-position) var(--sparkle-forth-position)/var(--sparkle-forth-bounding-size) var(--sparkle-forth-bounding-size-y) radial-gradient(transparent, transparent var(--sparkle-forth-size), var(--sparkle-forth-color) calc(var(--sparkle-forth-size) * var(--sparkle-forth-antialias)), var(--sparkle-forth-color)),
+								0 0/var(--particle-size) var(--particle-size) radial-gradient(var(--particle-color), var(--particle-color) 50%, transparent 50%, transparent),
+								var(--particle-second-position) var(--particle-second-position)/var(--particle-second-bounding-size) var(--particle-second-bounding-size) radial-gradient(var(--particle-second-color), var(--particle-second-color) var(--particle-second-size), transparent calc(var(--particle-second-size) * var(--particle-second-antialias)), transparent),
+								var(--particle-third-position) var(--particle-third-position)/var(--particle-third-bounding-size) var(--particle-third-bounding-size) radial-gradient(var(--particle-third-color), var(--particle-third-color) var(--particle-third-size), transparent calc(var(--particle-third-size) * var(--particle-third-antialias)), transparent),
+								radial-gradient(farthest-corner at left top, rgba(255,255,255,.3), transparent),
+								0 0/cover repeating-linear-gradient(var(--stripe-second-angle), var(--stripe-second-first-color), var(--stripe-second-first-color) var(--stripe-second-first-width), var(--stripe-second-second-color) var(--stripe-second-first-width), var(--stripe-second-second-color) calc(var(--stripe-second-first-width) + var(--stripe-second-second-width, var(--stripe-second-first-width)))),
+								repeating-linear-gradient(var(--stripe-third-angle), var(--stripe-second-first-color), var(--stripe-second-first-color) var(--stripe-second-first-width), var(--stripe-second-second-color) var(--stripe-second-first-width), var(--stripe-second-second-color) calc(var(--stripe-second-first-width) + var(--stripe-second-second-width, var(--stripe-second-first-width)))),
+								var(--stripe-image),
+								var(--sparkle-position) var(--sparkle-position)/var(--sparkle-bounding-size) var(--sparkle-bounding-size) radial-gradient(transparent, transparent var(--sparkle-size), var(--sparkle-color) calc(var(--sparkle-size) * var(--sparkle-antialias)), var(--sparkle-color)),
+								var(--sparkle-second-position) var(--sparkle-second-position)/var(--sparkle-second-bounding-size) var(--sparkle-second-bounding-size) radial-gradient(transparent, transparent var(--sparkle-second-size), var(--sparkle-second-color) calc(var(--sparkle-second-size) * var(--sparkle-second-antialias)), var(--sparkle-second-color)),
+								0 0/var(--particle-size) var(--particle-size) radial-gradient(var(--particle-color), var(--particle-color) 50%, transparent calc(50% * var(--particle-antialias)), transparent),
+								var(--grain-position) var(--grain-position)/var(--grain-bounding-size) var(--grain-bounding-size) radial-gradient(var(--grain-color), var(--grain-color) var(--grain-size), transparent calc(var(--grain-size) * var(--grain-antialias)), transparent),
+								repeating-radial-gradient(var(--repeating-circle-start-color), var(--repeating-circle-start-color) var(--repeating-circle-start-stop), var(--repeating-circle-end-color) calc(var(--repeating-circle-start-stop) * var(--repeating-circle-antialias)), var(--repeating-circle-end-color) var(--repeating-circle-end-stop), var(--repeating-circle-end-color) calc(var(--repeating-circle-end-stop) * var(--repeating-circle-antialias))),
+								radial-gradient(farthest-corner at left top, rgba(255,200,255,1) 20%, rgba(255,0,160,calc(2 / 3))),
+								linear-gradient(var(--stripe-extension-color), var(--stripe-base-color)) var(--stripe-base-color);
+				
+				align-items: center;
+				display: flex;
+				justify-content: center;
+				overflow: hidden;
+				
+			}
+			.stripe:hover::before {
+				
+				--sparkle-position: calc(var(--sparkle-bounding-size) * 1);
+				--sparkle-color: rgba(160,120,120,1);
+				--sparkle-bounding-size: 10rem;
+				--sparkle-size: calc(var(--sparkle-bounding-size) / 2);
+				--sparkle-antialias: 1.02;
+				
+				--sparkle-second-position: calc(var(--sparkle-second-bounding-size) * 1);
+				--sparkle-second-color: rgba(255,255,255,1);
+				--sparkle-second-bounding-size: 1.2rem;
+				--sparkle-second-size: calc(var(--sparkle-second-bounding-size) / 2.1);
+				--sparkle-second-antialias: 1.1;
+				
+				--repeating-circle-start-color: rgba(255,200,240,.5);
+				--repeating-circle-end-color: transparent;
+				--repeating-circle-start-stop: .2%;
+				--repeating-circle-end-stop: 1%;
+				--repeating-circle-antialias: 1.05;
+				
+				background:	radial-gradient(ellipse farthest-corner at 25% 25%, transparent 67%, rgb(255,144,160) 95%),
+				var(--sparkle-position) var(--sparkle-position)/var(--sparkle-bounding-size) var(--sparkle-bounding-size) radial-gradient(transparent, transparent var(--sparkle-size), var(--sparkle-color) calc(var(--sparkle-size) * var(--sparkle-antialias)), var(--sparkle-color)),
+								radial-gradient(ellipse farthest-corner at 25% 25%, transparent 67%, rgb(255,144,160) 95%),
+								var(--sparkle-second-position) var(--sparkle-second-position)/var(--sparkle-second-bounding-size) var(--sparkle-second-bounding-size) radial-gradient(transparent, transparent var(--sparkle-second-size), var(--sparkle-second-color) calc(var(--sparkle-second-size) * var(--sparkle-second-antialias)), var(--sparkle-second-color)),
+								repeating-radial-gradient(var(--repeating-circle-start-color), var(--repeating-circle-start-color) var(--repeating-circle-start-stop), var(--repeating-circle-end-color) calc(var(--repeating-circle-start-stop) * var(--repeating-circle-antialias)), var(--repeating-circle-end-color) var(--repeating-circle-end-stop), var(--repeating-circle-end-color) calc(var(--repeating-circle-end-stop) * var(--repeating-circle-antialias))),
+								linear-gradient(rgb(255,120,200), rgb(255,240,120));
+				
 				background-clip: text;
 				color: transparent;
 				content: "THIS IS YOU!";
